@@ -9,37 +9,37 @@ class restraunt_order_kitchen_billing_system{
         String all;
 
 
-        String a = "Chicken Biryani";
-        int CB = 220;
+        String cb = "Chicken Biryani";
+        int cb_price = 220;
 
-        String b = "Chicken Noddels";
-        int CN = 120;
+        String cn = "Chicken Noddels";
+        int cn_price = 120;
 
-        String c = "Mutton Biryani";
-        int MB = 240;
+        String mb = "Mutton Biryani";
+        int mb_price = 240;
 
-        String d = "Chicken Lolipop";
-        int CL = 160;
+        String cl = "Chicken Lolipop";
+        int cl_price = 160;
 
-        String e = "Chicken Tandori";
-        int CT = 240;
-
-
-        String f = "Panner Tikka" ;
-        int PT = 120 ;
-
-        String g = "Methi Chaman" ;
-        int MC = 240 ;
-
-        String h = "Palak Panner" ;
-        int PP = 160;
-
-        String i = "Panner Butter Masala" ;
-        int PBM = 210 ;
+        String ct = "Chicken Tandori";
+        int ct_price = 240;
 
 
-        String j = "Egg Buji";
-        int EB = 110 ;
+        String pt = "Panner Tikka" ;
+        int pt_price = 120 ;
+
+        String mc = "Methi Chaman" ;
+        int mc_price = 240 ;
+
+        String pp = "Palak Panner" ;
+        int pp_price = 160;
+
+        String pbm = "Panner Butter Masala" ;
+        int pbm_price = 210 ;
+
+
+        String eb = "Egg Buji";
+        int eb_price = 110 ;
 
         System.out.println(" 1 . nonveg");
         System.out.println(" 2 . veg");
@@ -64,20 +64,20 @@ class restraunt_order_kitchen_billing_system{
             case "nonveg" :
 
                 System.out.println("Selected Nonveg ");
-                System.out.println(a + " = " + CB);
-                System.out.println(b + " = " + CN);
-                System.out.println(c + " = " + MB);
-                System.out.println(d + " = " + CL);
-                System.out.println(e + " = " + CT);
+                System.out.println(cb + " = " + cb_price);
+                System.out.println(cn + " = " + cn_price);
+                System.out.println(mb + " = " + mb_price);
+                System.out.println(cl + " = " + cl_price);
+                System.out.println(ct + " = " + ct_price);
                 break;
 
             case "veg" :
 
                 System.out.println("Selected veg ");
-                System.out.println(f + " = " + PT);
-                System.out.println(g + " = " + MC);
-                System.out.println(h + " = " + PP);
-                System.out.println(i + " = " + PBM);
+                System.out.println(pt + " = " + pt_price);
+                System.out.println(mc + " = " + mc_price);
+                System.out.println(pp + " = " + pp_price);
+                System.out.println(pbm + " = " + pbm_price);
                 break;
 
 
@@ -85,20 +85,20 @@ class restraunt_order_kitchen_billing_system{
 
                 System.out.println("Selected eggitarian  ");
 
-                System.out.println(j + " = " + EB);
+                System.out.println(eb + " = " + eb_price);
                 break;
 
             case "all" :
-                System.out.println(j + " = " + EB);
-                System.out.println(a + " = " + CB);
-                System.out.println(b + " = " + CN);
-                System.out.println(c + " = " + MB);
-                System.out.println(d + " = " + CL);
-                System.out.println(e + " = " + CT);
-                System.out.println(f + " = " + PT);
-                System.out.println(g + " = " + MC);
-                System.out.println(h + " = " + PP);
-                System.out.println(i + " = " + PBM);
+                System.out.println(eb + " = " + eb_price);
+                System.out.println(cb + " = " + cb_price);
+                System.out.println(cn + " = " + cn_price);
+                System.out.println(mb + " = " + mb_price);
+                System.out.println(cl + " = " + cl_price);
+                System.out.println(ct + " = " + ct_price);
+                System.out.println(pt + " = " + pt_price);
+                System.out.println(mc + " = " + mc_price);
+                System.out.println(pp + " = " + pp_price);
+                System.out.println(pbm + " = " + pbm_price);
                  break;
 
             default :
@@ -106,6 +106,8 @@ class restraunt_order_kitchen_billing_system{
 
                 System.out.print("Select The Item");
                 String Selected_Item = sc.nextLine();
+
+
 
 
     sc.close();
