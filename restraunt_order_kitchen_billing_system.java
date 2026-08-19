@@ -115,6 +115,7 @@ class restraunt_order_kitchen_billing_system {
                         break;
                     }
 
+
                     if (selectedItem.equalsIgnoreCase(cb)) {
                         total_amount += cb_price;
                         System.out.println(cb + " added. Subtotal: " + total_amount);
