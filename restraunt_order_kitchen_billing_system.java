@@ -1,23 +1,26 @@
-import java.util.*;
-class restraunt_order_kitchen_billing_system{
-    public static void  main(String[] args){
+{
 
         Scanner sc = new Scanner(System.in);
+        String Noneveg;
+        String Veg;
+        String Eggitarian;
+        String ALl;
+
 
         String a = "Chicken Biryani";
-        int CB = 220 ;
+        int CB = 220;
 
         String b = "Chicken Noddels";
-        int CN = 120 ;
+        int CN = 120;
 
         String c = "Mutton Biryani";
-        int MB = 240 ;
+        int MB = 240;
 
         String d = "Chicken Lolipop";
-        int CL = 160 ;
+        int CL = 160;
 
         String e = "Chicken Tandori";
-        int CT = 240 ;
+        int CT = 240;
 
 
         String f = "Panner Tikka" ;
@@ -35,9 +38,31 @@ class restraunt_order_kitchen_billing_system{
 
         String j = "Egg Buji";
         int EB = 110 ;
+        System.out.println("===========");
+
+        System.out.println("   MENU   ");
+
+        System.out.println("===========");
+
+
+        System.out.print("Enter The Type ");
+        String Type = sc.nextLine();
+
+
+        switch(Type){
+
+
+            case "Nonveg" :
+
+                System.out.println("Selected Nonveg ");
+                System.out.println(a + " = " + CB);
+                System.out.println(b + " = " + CN);
+                System.out.println(c + " = " + MB);
+
+        }
+
 
 
 
 
     }
-}
