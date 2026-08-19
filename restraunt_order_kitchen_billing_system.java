@@ -44,7 +44,7 @@ class restraunt_order_kitchen_billing_system{
         System.out.println(" 1 . nonveg");
         System.out.println(" 2 . veg");
         System.out.println(" 3 . eggitarian");
-        System.out.println(" 1 . all");
+        System.out.println(" 4 . all");
 
         System.out.print("Enter The Type ");
         String Type = sc.nextLine();
@@ -69,6 +69,7 @@ class restraunt_order_kitchen_billing_system{
                 System.out.println(c + " = " + MB);
                 System.out.println(d + " = " + CL);
                 System.out.println(e + " = " + CT);
+                break;
 
             case "veg" :
 
@@ -77,6 +78,7 @@ class restraunt_order_kitchen_billing_system{
                 System.out.println(g + " = " + MC);
                 System.out.println(h + " = " + PP);
                 System.out.println(i + " = " + PBM);
+                break;
 
 
             case "eggitarian" :
@@ -84,7 +86,7 @@ class restraunt_order_kitchen_billing_system{
                 System.out.println("Selected eggitarian  ");
 
                 System.out.println(j + " = " + EB);
-
+                break;
 
             case "all" :
                 System.out.println(j + " = " + EB);
@@ -97,7 +99,16 @@ class restraunt_order_kitchen_billing_system{
                 System.out.println(g + " = " + MC);
                 System.out.println(h + " = " + PP);
                 System.out.println(i + " = " + PBM);
+                 break;
 
+            default :
+                System.out.println("Wrong Type Selected");
+
+                System.out.print("Select The Item");
+                String Selected_Item = sc.nextLine();
+
+
+    sc.close();
 
         }
 
