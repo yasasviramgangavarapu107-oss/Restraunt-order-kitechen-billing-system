@@ -10,8 +10,9 @@ class restraunt_order_kitchen_billing_system{
         String b = "Chicken Noddels";
         int Chicken_noddels = 120 ;
 
+        String c = "Mutton Biryani";
+        int Mutton_Biryani = 240 ;
 
-     //  hi
 
     }
 }
