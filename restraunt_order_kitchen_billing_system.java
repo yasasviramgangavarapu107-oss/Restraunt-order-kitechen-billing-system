@@ -69,6 +69,36 @@ class restraunt_order_kitchen_billing_system{
                 System.out.println(c + " = " + MB);
                 System.out.println(d + " = " + CL);
                 System.out.println(e + " = " + CT);
+
+            case "veg" :
+
+                System.out.println("Selected veg ");
+                System.out.println(f + " = " + PT);
+                System.out.println(g + " = " + MC);
+                System.out.println(h + " = " + PP);
+                System.out.println(i + " = " + PBM);
+
+
+            case "eggitarian" :
+
+                System.out.println("Selected eggitarian  ");
+
+                System.out.println(j + " = " + EB);
+
+
+            case "all" :
+                System.out.println(j + " = " + EB);
+                System.out.println(a + " = " + CB);
+                System.out.println(b + " = " + CN);
+                System.out.println(c + " = " + MB);
+                System.out.println(d + " = " + CL);
+                System.out.println(e + " = " + CT);
+                System.out.println(f + " = " + PT);
+                System.out.println(g + " = " + MC);
+                System.out.println(h + " = " + PP);
+                System.out.println(i + " = " + PBM);
+
+
         }
 
 
