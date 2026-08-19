@@ -1,4 +1,6 @@
-{
+import java.util.*;
+class restraunt_order_kitchen_billing_system{
+    public static void  main(String[] args){
 
         Scanner sc = new Scanner(System.in);
         String Noneveg;
@@ -66,3 +68,4 @@
 
 
     }
+}
