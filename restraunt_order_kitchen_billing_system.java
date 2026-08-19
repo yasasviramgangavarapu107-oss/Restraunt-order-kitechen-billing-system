@@ -101,7 +101,7 @@ class restraunt_order_kitchen_billing_system {
 
             default:
                 System.out.println("Wrong Type Selected");
-
+        }
                 System.out.print("Select The Item");
                 String Selected_Item = sc.nextLine();
                 int total_amount = 0;
@@ -110,28 +110,47 @@ class restraunt_order_kitchen_billing_system {
                     System.out.print("Enter item: ");
                     String selectedItem = sc.nextLine().trim();
 
-                    // Check if the user wants to stop
                     if (selectedItem.equals("0") || selectedItem.equalsIgnoreCase("exit")) {
-                        System.out.println("Ordering finished.");
+                        System.out.println("\nOrdering finished.");
                         break;
                     }
 
-                    // Match selected item and add to total
                     if (selectedItem.equalsIgnoreCase(cb)) {
                         total_amount += cb_price;
-                        System.out.println(cb + " added. Current Total: " + total_amount);
+                        System.out.println(cb + " added. Subtotal: " + total_amount);
                     } else if (selectedItem.equalsIgnoreCase(cn)) {
                         total_amount += cn_price;
-                        System.out.println(cn + " added. Current Total: " + total_amount);
+                        System.out.println(cn + " added. Subtotal: " + total_amount);
+                    } else if (selectedItem.equalsIgnoreCase(mb)) {
+                        total_amount += mb_price;
+                        System.out.println(mb + " added. Subtotal: " + total_amount);
+                    } else if (selectedItem.equalsIgnoreCase(cl)) {
+                        total_amount += cl_price;
+                        System.out.println(cl + " added. Subtotal: " + total_amount);
+                    } else if (selectedItem.equalsIgnoreCase(ct)) {
+                        total_amount += ct_price;
+                        System.out.println(ct + " added. Subtotal: " + total_amount);
                     } else if (selectedItem.equalsIgnoreCase(pt)) {
                         total_amount += pt_price;
-                        System.out.println(pt + " added. Current Total: " + total_amount);
+                        System.out.println(pt + " added. Subtotal: " + total_amount);
+                    } else if (selectedItem.equalsIgnoreCase(mc)) {
+                        total_amount += mc_price;
+                        System.out.println(mc + " added. Subtotal: " + total_amount);
+                    } else if (selectedItem.equalsIgnoreCase(pp)) {
+                        total_amount += pp_price;
+                        System.out.println(pp + " added. Subtotal: " + total_amount);
+                    } else if (selectedItem.equalsIgnoreCase(pbm)) {
+                        total_amount += pbm_price;
+                        System.out.println(pbm + " added. Subtotal: " + total_amount);
+                    } else if (selectedItem.equalsIgnoreCase(eb)) {
+                        total_amount += eb_price;
+                        System.out.println(eb + " added. Subtotal: " + total_amount);
                     } else {
-                        System.out.println("Item not found. Please check spelling.");
+                        System.out.println("Item not found. Please type the exact name from the menu.");
                     }
-                    sc.close();
+
 
                 }
         }
     }
-}
+
