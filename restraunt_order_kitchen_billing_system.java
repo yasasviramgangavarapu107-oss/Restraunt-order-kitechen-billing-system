@@ -102,10 +102,9 @@ class restraunt_order_kitchen_billing_system {
             default:
                 System.out.println("Wrong Type Selected");
         }
-                System.out.print("Select The Item");
-                String Selected_Item = sc.nextLine();
-                int total_amount = 0;
-                String exit = "0";
+
+        int total_amount = 0;
+
                 while (true) {
                     System.out.print("Enter item: ");
                     String selectedItem = sc.nextLine().trim();
@@ -114,7 +113,6 @@ class restraunt_order_kitchen_billing_system {
                         System.out.println("\nOrdering finished.");
                         break;
                     }
-
 
                     if (selectedItem.equalsIgnoreCase(cb)) {
                         total_amount += cb_price;
