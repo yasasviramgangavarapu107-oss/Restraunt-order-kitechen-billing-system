@@ -1,6 +1,6 @@
 import java.util.*;
-class restraunt_order_kitchen_billing_system{
-    public static void  main(String[] args){
+class restraunt_order_kitchen_billing_system {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         String noneveg;
@@ -25,21 +25,21 @@ class restraunt_order_kitchen_billing_system{
         int ct_price = 240;
 
 
-        String pt = "Panner Tikka" ;
-        int pt_price = 120 ;
+        String pt = "Panner Tikka";
+        int pt_price = 120;
 
-        String mc = "Methi Chaman" ;
-        int mc_price = 240 ;
+        String mc = "Methi Chaman";
+        int mc_price = 240;
 
-        String pp = "Palak Panner" ;
+        String pp = "Palak Panner";
         int pp_price = 160;
 
-        String pbm = "Panner Butter Masala" ;
-        int pbm_price = 210 ;
+        String pbm = "Panner Butter Masala";
+        int pbm_price = 210;
 
 
         String eb = "Egg Buji";
-        int eb_price = 110 ;
+        int eb_price = 110;
 
         System.out.println(" 1 . nonveg");
         System.out.println(" 2 . veg");
@@ -56,12 +56,10 @@ class restraunt_order_kitchen_billing_system{
         System.out.println("===========");
 
 
-
-        switch(Type){
-
+        switch (Type) {
 
 
-            case "nonveg" :
+            case "nonveg":
 
                 System.out.println("Selected Nonveg ");
                 System.out.println(cb + " = " + cb_price);
@@ -71,7 +69,7 @@ class restraunt_order_kitchen_billing_system{
                 System.out.println(ct + " = " + ct_price);
                 break;
 
-            case "veg" :
+            case "veg":
 
                 System.out.println("Selected veg ");
                 System.out.println(pt + " = " + pt_price);
@@ -81,14 +79,14 @@ class restraunt_order_kitchen_billing_system{
                 break;
 
 
-            case "eggitarian" :
+            case "eggitarian":
 
                 System.out.println("Selected eggitarian  ");
 
                 System.out.println(eb + " = " + eb_price);
                 break;
 
-            case "all" :
+            case "all":
                 System.out.println(eb + " = " + eb_price);
                 System.out.println(cb + " = " + cb_price);
                 System.out.println(cn + " = " + cn_price);
@@ -99,23 +97,41 @@ class restraunt_order_kitchen_billing_system{
                 System.out.println(mc + " = " + mc_price);
                 System.out.println(pp + " = " + pp_price);
                 System.out.println(pbm + " = " + pbm_price);
-                 break;
+                break;
 
-            default :
+            default:
                 System.out.println("Wrong Type Selected");
 
                 System.out.print("Select The Item");
                 String Selected_Item = sc.nextLine();
+                int total_amount = 0;
+                String exit = "0";
+                while (true) {
+                    System.out.print("Enter item: ");
+                    String selectedItem = sc.nextLine().trim();
 
+                    // Check if the user wants to stop
+                    if (selectedItem.equals("0") || selectedItem.equalsIgnoreCase("exit")) {
+                        System.out.println("Ordering finished.");
+                        break;
+                    }
 
+                    // Match selected item and add to total
+                    if (selectedItem.equalsIgnoreCase(cb)) {
+                        total_amount += cb_price;
+                        System.out.println(cb + " added. Current Total: " + total_amount);
+                    } else if (selectedItem.equalsIgnoreCase(cn)) {
+                        total_amount += cn_price;
+                        System.out.println(cn + " added. Current Total: " + total_amount);
+                    } else if (selectedItem.equalsIgnoreCase(pt)) {
+                        total_amount += pt_price;
+                        System.out.println(pt + " added. Current Total: " + total_amount);
+                    } else {
+                        System.out.println("Item not found. Please check spelling.");
+                    }
+                    sc.close();
 
-
-    sc.close();
-
+                }
         }
-
-
-
-
     }
 }
