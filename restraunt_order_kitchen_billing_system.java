@@ -5,19 +5,36 @@ class restraunt_order_kitchen_billing_system{
         Scanner sc = new Scanner(System.in);
 
         String a = "Chicken Biryani";
-        int Chicken_Biryani = 220 ;
+        int CB = 220 ;
 
         String b = "Chicken Noddels";
-        int Chicken_noddels = 120 ;
+        int CN = 120 ;
 
         String c = "Mutton Biryani";
-        int Mutton_Biryani = 240 ;
+        int MB = 240 ;
 
         String d = "Chicken Lolipop";
-        int Chicken_Lolipop = 160 ;
+        int CL = 160 ;
 
         String e = "Chicken Tandori";
-        int Chicken_Tandori = 240 ;
+        int CT = 240 ;
+
+
+        String f = "Panner Tikka" ;
+        int PT = 120 ;
+
+        String g = "Methi Chaman" ;
+        int MC = 240 ;
+
+        String h = "Palak Panner" ;
+        int PP = 160;
+
+        String i = "Panner Butter Masala" ;
+        int PBM = 210 ;
+
+
+        String j = "Egg Buji";
+        int EB = 110 ;
 
 
 
