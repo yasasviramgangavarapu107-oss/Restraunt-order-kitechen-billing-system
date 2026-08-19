@@ -3,10 +3,10 @@ class restraunt_order_kitchen_billing_system{
     public static void  main(String[] args){
 
         Scanner sc = new Scanner(System.in);
-        String Noneveg;
-        String Veg;
-        String Eggitarian;
-        String ALl;
+        String noneveg;
+        String veg;
+        String eggitarian;
+        String all;
 
 
         String a = "Chicken Biryani";
@@ -40,6 +40,15 @@ class restraunt_order_kitchen_billing_system{
 
         String j = "Egg Buji";
         int EB = 110 ;
+
+        System.out.println(" 1 . nonveg");
+        System.out.println(" 2 . veg");
+        System.out.println(" 3 . eggitarian");
+        System.out.println(" 1 . all");
+
+        System.out.print("Enter The Type ");
+        String Type = sc.nextLine();
+
         System.out.println("===========");
 
         System.out.println("   MENU   ");
@@ -47,24 +56,20 @@ class restraunt_order_kitchen_billing_system{
         System.out.println("===========");
 
 
-        System.out.print("Enter The Type ");
-        String Type = sc.nextLine();
-
 
         switch(Type){
 
 
-            case "Nonveg" :
+            case "nonveg" :
 
                 System.out.println("Selected Nonveg ");
                 System.out.println(a + " = " + CB);
                 System.out.println(b + " = " + CN);
                 System.out.println(c + " = " + MB);
-
+                System.out.println(d + " = " + CL);
+                System.out.println(e + " = " + CT);
         }
 
-
-////hisdfghjk
 
 
     }
