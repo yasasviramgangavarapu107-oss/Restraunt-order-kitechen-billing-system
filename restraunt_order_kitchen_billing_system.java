@@ -94,16 +94,16 @@ class RestaurantBillingSystem {
         if (total_amount > 0) {
 
             double service_tax = total_amount * 0.05;
-            double gst = total_amount * 0.18;
+            double gst = total_amount * 0.018;
 
             double final_bill = total_amount + service_tax + gst;
 
             System.out.printf("%n========== FINAL BILL ==========%n");
-            System.out.printf("Subtotal:    Rs %10d%n", total_amount);
-            System.out.printf("Service Tax: Rs %10.2f%n", service_tax);
-            System.out.printf("GST (18%%):   Rs %10.2f%n", gst);
+            System.out.println("Subtotal:    Rs   " + total_amount);
+            System.out.println("Service Tax: Rs  "  + service_tax);
+            System.out.println("GST (1.8%%):  Rs  " + gst);
             System.out.println("--------------------------------");
-            System.out.printf("Total Due:   Rs %10.2f%n", final_bill);
+            System.out.println("Total Due:   Rs   " + final_bill);
             System.out.println("================================");
         } else {
             System.out.println("No items were ordered.");
