@@ -150,7 +150,8 @@ class restraunt_order_kitchen_billing_system {
 
 
         }
-
+        double Service_tax = 0.11*total_amount;
+        System.out.println("Service tax = " + Service_tax);
         System.out.println("Final = "+ total_amount);
     }
 }
