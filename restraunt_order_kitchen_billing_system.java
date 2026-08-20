@@ -20,31 +20,41 @@ class RestaurantBillingSystem {
         System.out.println("          MENU         ");
         System.out.println("=======================");
 
-        switch (type) {
-            case 1:
-                System.out.println("101. Chicken Biryani = " + cb_price);
-                System.out.println("102. Chicken Noodles = " + cn_price);
-                System.out.println("103. Mutton Biryani  = " + mb_price);
-                System.out.println("104. Chicken Lolipop = " + cl_price);
-                System.out.println("105. Chicken Tandori = " + ct_price);
-                break;
-            case 2:
-                System.out.println("201. Paneer Tikka         = " + pt_price);
-                System.out.println("202. Methi Chaman         = " + mc_price);
-                System.out.println("203. Palak Paneer         = " + pp_price);
-                System.out.println("204. Paneer Butter Masala = " + pbm_price);
-                break;
-            case 3:
-                System.out.println("301. Egg Bhurji = " + eb_price);
-                break;
-            case 4:
-                System.out.println("101. Chicken Biryani = " + cb_price);
-                System.out.println("201. Paneer Tikka    = " + pt_price);
-                System.out.println("301. Egg Bhurji      = " + eb_price);
-                break;
-            default:
-                System.out.println("Invalid Category Selected.");
-        }
+          switch (Type) {
+
+
+              case 1:
+                  System.out.println("101. Chicken Biryani = " + cb_price);
+                  System.out.println("102. Chicken Noodles = " + cn_price);
+                  System.out.println("103. Mutton Biryani  = " + mb_price);
+                  System.out.println("104. Chicken Lolipop = " + cl_price);
+                  System.out.println("105. Chicken Tandori = " + ct_price);
+                  break;
+              case 2:
+                  System.out.println("201. Paneer Tikka         = " + pt_price);
+                  System.out.println("202. Methi Chaman         = " + mc_price);
+                  System.out.println("203. Palak Paneer         = " + pp_price);
+                  System.out.println("204. Paneer Butter Masala = " + pbm_price);
+                  break;
+              case 3:
+                  System.out.println("301. Egg Bhurji = " + eb_price);
+                  break;
+
+              case 4:
+                  System.out.println("301. Egg Bhurji = " + eb_price);
+                  System.out.println("101. Chicken Biryani = " + cb_price);
+                  System.out.println("102. Chicken Noodles = " + cn_price);
+                  System.out.println("103. Mutton Biryani  = " + mb_price);
+                  System.out.println("104. Chicken Lolipop = " + cl_price);
+                  System.out.println("105. Chicken Tandori = " + ct_price);
+                  System.out.println("201. Paneer Tikka         = " + pt_price);
+                  System.out.println("202. Methi Chaman         = " + mc_price);
+                  System.out.println("203. Palak Paneer         = " + pp_price);
+                  System.out.println("204. Paneer Butter Masala = " + pbm_price);
+
+              default:
+                  System.out.println("Wrong Type Selected");
+          }
         System.out.println("============================\n");
 
         int total_amount = 0;
