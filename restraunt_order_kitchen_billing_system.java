@@ -1,159 +1,105 @@
-import java.util.*;
-class restraunt_order_kitchen_billing_system {
-    public static void main(String[] args) {
-
+import java.util.Scanner;
+class RestaurantBillingSystem {
+      void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String noneveg;
-        String veg;
-        String eggitarian;
-        String all;
 
-
-        String cb = "Chicken Biryani";
-        int cb_price = 220;
-
-        String cn = "Chicken Noddels";
-        int cn_price = 120;
-
-        String mb = "Mutton Biryani";
-        int mb_price = 240;
-
-        String cl = "Chicken Lolipop";
-        int cl_price = 160;
-
-        String ct = "Chicken Tandori";
-        int ct_price = 240;
-
-
-        String pt = "Panner Tikka";
-        int pt_price = 120;
-
-        String mc = "Methi Chaman";
-        int mc_price = 240;
-
-        String pp = "Palak Panner";
-        int pp_price = 160;
-
-        String pbm = "Panner Butter Masala";
-        int pbm_price = 210;
-
-
-        String eb = "Egg Buji";
+        // Item Prices
+        int cb_price = 220, cn_price = 120, mb_price = 240, cl_price = 160, ct_price = 240;
+        int pt_price = 120, mc_price = 240, pp_price = 160, pbm_price = 210;
         int eb_price = 110;
 
-        System.out.println(" 1 . nonveg");
-        System.out.println(" 2 . veg");
-        System.out.println(" 3 . eggitarian");
-        System.out.println(" 4 . all");
+        System.out.println("=== MENU CATEGORIES ===");
+        System.out.println("1. Non-Veg");
+        System.out.println("2. Veg");
+        System.out.println("3. Eggitarian");
+        System.out.println("4. All");
+        System.out.print("Enter The Type (1-4): ");
+        int type = sc.nextInt();
 
-        System.out.print("Enter The Type ");
-        String Type = sc.nextLine();
+        System.out.println("=======================");
+        System.out.println("          MENU         ");
+        System.out.println("=======================");
 
-        System.out.println("===========");
-
-        System.out.println("   MENU   ");
-
-        System.out.println("===========");
-
-
-        switch (Type) {
-
-
-            case "nonveg":
-
-                System.out.println("Selected Nonveg ");
-                System.out.println(cb + " = " + cb_price);
-                System.out.println(cn + " = " + cn_price);
-                System.out.println(mb + " = " + mb_price);
-                System.out.println(cl + " = " + cl_price);
-                System.out.println(ct + " = " + ct_price);
+        switch (type) {
+            case 1:
+                System.out.println("101. Chicken Biryani = " + cb_price);
+                System.out.println("102. Chicken Noodles = " + cn_price);
+                System.out.println("103. Mutton Biryani  = " + mb_price);
+                System.out.println("104. Chicken Lolipop = " + cl_price);
+                System.out.println("105. Chicken Tandori = " + ct_price);
                 break;
-
-            case "veg":
-
-                System.out.println("Selected veg ");
-                System.out.println(pt + " = " + pt_price);
-                System.out.println(mc + " = " + mc_price);
-                System.out.println(pp + " = " + pp_price);
-                System.out.println(pbm + " = " + pbm_price);
+            case 2:
+                System.out.println("201. Paneer Tikka         = " + pt_price);
+                System.out.println("202. Methi Chaman         = " + mc_price);
+                System.out.println("203. Palak Paneer         = " + pp_price);
+                System.out.println("204. Paneer Butter Masala = " + pbm_price);
                 break;
-
-
-            case "eggitarian":
-
-                System.out.println("Selected eggitarian  ");
-
-                System.out.println(eb + " = " + eb_price);
+            case 3:
+                System.out.println("301. Egg Bhurji = " + eb_price);
                 break;
-
-            case "all":
-                System.out.println(eb + " = " + eb_price);
-                System.out.println(cb + " = " + cb_price);
-                System.out.println(cn + " = " + cn_price);
-                System.out.println(mb + " = " + mb_price);
-                System.out.println(cl + " = " + cl_price);
-                System.out.println(ct + " = " + ct_price);
-                System.out.println(pt + " = " + pt_price);
-                System.out.println(mc + " = " + mc_price);
-                System.out.println(pp + " = " + pp_price);
-                System.out.println(pbm + " = " + pbm_price);
+            case 4:
+                System.out.println("101. Chicken Biryani = " + cb_price);
+                System.out.println("201. Paneer Tikka    = " + pt_price);
+                System.out.println("301. Egg Bhurji      = " + eb_price);
                 break;
-
             default:
-                System.out.println("Wrong Type Selected");
+                System.out.println("Invalid Category Selected.");
         }
+        System.out.println("============================\n");
 
         int total_amount = 0;
+        boolean isOrdering = true;
 
-        while (true) {
-            System.out.print("Enter item: ");
-            String selectedItem = sc.nextLine().trim();
+        // while loop perfectly replaces the need to store cart items in an array
+        while (isOrdering) {
+            System.out.print("Enter Item Code (or 0 to Generate Bill): ");
+            int selectedItem = sc.nextInt();
 
-            if (selectedItem.equals("0") || selectedItem.equalsIgnoreCase("exit")) {
-                System.out.println("\nOrdering finished.");
-                break;
+            if (selectedItem == 0) {
+                isOrdering = false;
+                continue; // Skips the rest of the loop and goes to billing
             }
 
-            if (selectedItem.equalsIgnoreCase(cb)) {
+            // Using if-else ladder for item selection
+            if (selectedItem == 101) {
                 total_amount += cb_price;
-                System.out.println(cb + " added. Subtotal: " + total_amount);
-            } else if (selectedItem.equalsIgnoreCase(cn)) {
+                System.out.println("Chicken Biryani added. Subtotal: " + total_amount);
+            } else if (selectedItem == 102) {
                 total_amount += cn_price;
-                System.out.println(cn + " added. Subtotal: " + total_amount);
-            } else if (selectedItem.equalsIgnoreCase(mb)) {
+                System.out.println("Chicken Noodles added. Subtotal: " + total_amount);
+            } else if (selectedItem == 103) {
                 total_amount += mb_price;
-                System.out.println(mb + " added. Subtotal: " + total_amount);
-            } else if (selectedItem.equalsIgnoreCase(cl)) {
-                total_amount += cl_price;
-                System.out.println(cl + " added. Subtotal: " + total_amount);
-            } else if (selectedItem.equalsIgnoreCase(ct)) {
-                total_amount += ct_price;
-                System.out.println(ct + " added. Subtotal: " + total_amount);
-            } else if (selectedItem.equalsIgnoreCase(pt)) {
+                System.out.println("Mutton Biryani added. Subtotal: " + total_amount);
+            } else if (selectedItem == 201) {
                 total_amount += pt_price;
-                System.out.println(pt + " added. Subtotal: " + total_amount);
-            } else if (selectedItem.equalsIgnoreCase(mc)) {
-                total_amount += mc_price;
-                System.out.println(mc + " added. Subtotal: " + total_amount);
-            } else if (selectedItem.equalsIgnoreCase(pp)) {
-                total_amount += pp_price;
-                System.out.println(pp + " added. Subtotal: " + total_amount);
-            } else if (selectedItem.equalsIgnoreCase(pbm)) {
-                total_amount += pbm_price;
-                System.out.println(pbm + " added. Subtotal: " + total_amount);
-            } else if (selectedItem.equalsIgnoreCase(eb)) {
+                System.out.println("Paneer Tikka added. Subtotal: " + total_amount);
+            } else if (selectedItem == 301) {
                 total_amount += eb_price;
-                System.out.println(eb + " added. Subtotal: " + total_amount);
+                System.out.println("Egg Bhurji added. Subtotal: " + total_amount);
             } else {
-                System.out.println("Item not found. Please type the exact name from the menu.");
+                System.out.println("Invalid Code. Please try again.");
             }
-
-
         }
-        double Service_tax = 0.05*total_amount;
-        double GSt = 0.018*total_amount;
-        System.out.println("Service tax = " + Service_tax);
-        System.out.println("GST = " + GSt);
-        System.out.println("Final = "+ total_amount);
+
+        // --- FINAL BILLING CALCULATIONS ---
+        if (total_amount > 0) {
+            // Implicit widening casting occurs here (int * double = double)
+            double service_tax = total_amount * 0.05;
+            double gst = total_amount * 0.18; // Corrected from 0.018 to 0.18 for 18% GST
+
+            double final_bill = total_amount + service_tax + gst; // Correctly summing all charges
+
+            System.out.printf("%n========== FINAL BILL ==========%n");
+            System.out.printf("Subtotal:    Rs %10d%n", total_amount);
+            System.out.printf("Service Tax: Rs %10.2f%n", service_tax);
+            System.out.printf("GST (18%%):   Rs %10.2f%n", gst);
+            System.out.println("--------------------------------");
+            System.out.printf("Total Due:   Rs %10.2f%n", final_bill);
+            System.out.println("================================");
+        } else {
+            System.out.println("No items were ordered.");
+        }
+
+        sc.close();
     }
 }
