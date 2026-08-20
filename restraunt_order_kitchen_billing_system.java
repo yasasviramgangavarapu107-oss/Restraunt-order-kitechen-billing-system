@@ -150,7 +150,10 @@ class restraunt_order_kitchen_billing_system {
 
 
         }
-
+        double Service_tax = 0.05*total_amount;
+        double GSt = 0.018*total_amount;
+        System.out.println("Service tax = " + Service_tax);
+        System.out.println("GST = " + GSt);
         System.out.println("Final = "+ total_amount);
     }
 }
